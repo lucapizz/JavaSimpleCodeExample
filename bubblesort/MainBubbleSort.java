@@ -5,31 +5,26 @@ import java.util.Random;
 public class MainBubbleSort {
 
 	public static void main(String[] args) {
-		
-
+		bubblesort();
 	}
 
-}
 
-
-/**
- * Implementazione dell'ordinamento di un vettore usando il metodo BUBBLESORT.
- * 
- * @author lpizz
- *
- */
-public class bubblesort {
-	public static void main(String[] args) {
-		String []nomi;
-		
+	/**
+	 * Implementazione dell'ordinamento di un vettore usando il metodo
+	 * BUBBLESORT che consiste nel confrontare tutte le coppie di dati vicini
+	 * e scambiarli se non sono nell'ordine richiesto ripetendo il ciclo sino
+	 * a quando non viene più eseguito alcuno scambio.
+	 * 
+	 * @author lpizz
+	 *
+	 */
+	public static void bubblesort() {
+		int v[] = new int[7]; //preparo un vettore di lunghezza fissa
 		Random r = new Random();
-
-		int lun = r.nextInt(10) + 1;
 		
-		int v[] = new int[lun];
-		
-		for(int ii=0; ii<v.length; ii++){
-			v[ii] = r.nextInt(100)+1;
+		System.out.print("*** Program start\n\nDati da ordinare: ");
+		for(int ii=0; ii<v.length; ii++){ //riempio il vettore
+			v[ii] = r.nextInt(100)+1; //genero numeri casuali tra 1 e 100
 			System.out.print(v[ii] + " ");
 		}
 		boolean ripeti;
@@ -43,18 +38,30 @@ public class bubblesort {
 					ripeti=true;
 				}
 			}
-		}while(ripeti);//continuo a ciclare finchÃ¨ ci sono scambi
+		}while(ripeti);//ciclo finchè eseguo scambi
 
-		System.out.println("");
+		System.out.print("\n Dati riordinati: ");
 
 		for(int ii=0; ii<v.length; ii++){
 			System.out.print(v[ii] + " ");
 		}
-
-		nomi = new String[5];
-		nomi[2] = "ciao";
-
-		System.out.print("\n"+ nomi.length +" "+ nomi[2].length() );
+		System.out.print("\n\n*** Program end\n");
 	}
 
 }
+
+/*
+ * Qui sotto ho riportato i messaggi generati da un'esecuzione del codice.
+ * Collaudato con successo.
+
+
+*** Program start
+
+Dati da ordinare: 43 48 43 33 99 65 10 
+ Dati riordinati: 10 33 43 43 48 65 99 
+
+*** Program end
+
+
+ */
+
