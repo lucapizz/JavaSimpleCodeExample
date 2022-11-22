@@ -8,7 +8,6 @@ public class MainBubbleSort {
 		bubblesort();
 	}
 
-
 	/**
 	 * Implementazione dell'ordinamento di un vettore usando il metodo
 	 * BUBBLESORT che consiste nel confrontare tutte le coppie di dati vicini
@@ -16,7 +15,6 @@ public class MainBubbleSort {
 	 * a quando non viene più eseguito alcuno scambio.
 	 * 
 	 * @author lpizz
-	 *
 	 */
 	public static void bubblesort() {
 		int v[] = new int[7]; //preparo un vettore di lunghezza fissa
@@ -38,7 +36,7 @@ public class MainBubbleSort {
 					ripeti=true;
 				}
 			}
-		}while(ripeti);//ciclo finchè eseguo scambi
+		}while(ripeti);//ripeto il ciclo fino a quando eseguo scambi
 
 		System.out.print("\n Dati riordinati: ");
 
@@ -64,4 +62,3 @@ Dati da ordinare: 43 48 43 33 99 65 10
 
 
  */
-
